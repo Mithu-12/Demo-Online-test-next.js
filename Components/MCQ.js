@@ -58,10 +58,6 @@ const MCQ = ({ data }) => {
     });
   };
 
-  // const handleSubmit = (e) => {
-  //   // e.preventDefault();
-  //   setSubmitted(true);
-  // };
   const handleSubmit = (e) => {
     setsubmitActive(!submitActive);
     if (selectedOption === -1) {
@@ -78,7 +74,7 @@ const MCQ = ({ data }) => {
             width: '70%',
             border: '2px solid #000',
             boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.5)',
-            paddingBottom: '70px'
+            paddingBottom: '70px',
           }}
         >
           <p style={{ backgroundColor: '#4C8CCC', color: '#fff' }}>
@@ -115,7 +111,6 @@ const MCQ = ({ data }) => {
               ))}
             </div>
           </div>
-          
         </div>
         <div style={{ width: '20%', marginLeft: '20px' }}>
           <div style={{ marginTop: 0, border: '1px solid #000' }}>
@@ -142,84 +137,50 @@ const MCQ = ({ data }) => {
             <Button text="Profile"></Button>
             <Button text="Instr"></Button>
             <Button text="Question"></Button>
-
-            <button
-              disabled={selectedOption === -1}
-              onClick={handleSubmit}
-              style={{
-                color: '#fff',
-                border: 'none',
-                padding: '10px 15px',
-                borderRadius: '7px',
-                margin: '0px 10px',
+            <Button
+              text="Submit"
+              customStyle={{
                 backgroundColor: submitActive ? 'blue' : '#4C8CCC',
               }}
-            >
-              Submit
-            </button>
+              onClick={handleSubmit}
+              disabled={selectedOption === -1}
+            ></Button>
           </div>
         </div>
       </div>
       <div style={{ marginTop: '31px', padding: '0px' }}>
-            <div>
-              <button
-                onClick={handleClearResponse}
-                style={{
-                  color: '#fff',
-                  border: 'none',
-                  padding: '10px 15px',
-                  borderRadius: '7px',
-                  margin: '0px 10px',
-                  backgroundColor: clearActive ? 'black' : '#4C8CCC',
-                }}
-              >
-                Clear Response
-              </button>
+        <div>
+          <Button
+            text="Clear Response"
+            customStyle={{ backgroundColor: clearActive ? 'black' : '#4C8CCC' }}
+            onClick={handleClearResponse}
+          ></Button>
 
-              <button
-                disabled={selectedOption === 0}
-                onClick={handleReview}
-                style={{
-                  color: '#fff',
-                  border: 'none',
-                  padding: '10px 15px',
-                  borderRadius: '7px',
-                  margin: '0px 10px',
-                  backgroundColor: reviewActive ? 'yellow' : '#4C8CCC',
-                }}
-              >
-                Review
-              </button>
+          <Button
+            text="Review"
+            customStyle={{
+              backgroundColor: reviewActive ? 'yellow' : '#4C8CCC',
+            }}
+            onClick={handleReview}
+            disabled={selectedOption === 0}
+          ></Button>
 
-              <button
-                disabled={selectedOption === 1}
-                onClick={handlePrevious}
-                style={{
-                  color: '#fff',
-                  border: 'none',
-                  padding: '10px 15px',
-                  borderRadius: '7px',
-                  margin: '0px 10px',
-                  backgroundColor: previousActive ? 'black' : '#4C8CCC',
-                }}
-              >
-                Previous
-              </button>
-              <button
-                onClick={handleNext}
-                style={{
-                  color: '#fff',
-                  border: 'none',
-                  padding: '10px 15px',
-                  borderRadius: '7px',
-                  margin: '0px 10px',
-                  backgroundColor: nextActive ? 'green' : '#4C8CCC',
-                }}
-              >
-                Next
-              </button>
-            </div>
-          </div>
+          <Button
+            text="Previous"
+            customStyle={{
+              backgroundColor: previousActive ? 'black' : '#4C8CCC',
+            }}
+            onClick={handlePrevious}
+            disabled={selectedOption === 1}
+          ></Button>
+
+          <Button
+            text="Next"
+            customStyle={{ backgroundColor: nextActive ? 'green' : '#4C8CCC' }}
+            onClick={handleNext}
+          ></Button>
+        </div>
+      </div>
     </div>
   );
 };

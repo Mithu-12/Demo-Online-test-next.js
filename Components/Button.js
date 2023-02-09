@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export default function Button({onClick, text, style, customStyle}) {
+export default function Button({onClick, text, style, customStyle, disabled}) {
     style = {
         // backgroundColor: backgroundColor ? backgroundColor : '#4c8ccc',
         backgroundColor: '#4c8ccc',
@@ -15,5 +15,5 @@ export default function Button({onClick, text, style, customStyle}) {
         ...customStyle,
       };
  
-  return <button style={style} onClick={onClick}>{text}</button>;
+  return <button style={style} onClick={onClick} disabled={disabled}>{text}</button>;
 }

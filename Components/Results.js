@@ -7,7 +7,6 @@ const Results = ({ answers, data }) => {
             style={{
               width: '30px',
               height: '30px',
-              border: '1px solid black',
               backgroundColor: answer === data[index].answer ? 'green' : 'red',
               display: 'flex',
               alignItems: 'center',
