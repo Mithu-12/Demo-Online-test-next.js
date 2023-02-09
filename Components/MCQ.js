@@ -120,7 +120,7 @@ const MCQ = ({ data }) => {
               alt="Mithu"
             />
           </div>
-          <div style={{ border: '1px solid #000', margin: '10px 0px' }}>
+          <div style={{ border: '1px solid #000', margin: '10px 0px', paddingBottom: '50px', backgroundColor: '#CEECED' }}>
             <p style={{ fontWeight: 'bold', backgroundColor: '#4c8ccc' }}>
               Question Pallete
             </p>
@@ -132,6 +132,9 @@ const MCQ = ({ data }) => {
               gridTemplateColumns: '1fr 1fr',
               gridGap: '16px',
               marginTop: '10px',
+              border: '1px solid gray',
+              padding: '10px',
+              backgroundColor: '#CEECED'
             }}
           >
             <Button text="Profile"></Button>
