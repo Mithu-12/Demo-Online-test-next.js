@@ -1,12 +1,13 @@
 import Layout from '../Components/Layout';
 import MCQ from '../Components/MCQ';
-import { allData } from '../utils/data';
+import { physicsData } from '../utils/data';
 
-export default function Home() {
+export default function Physics() {
+  console.log(physicsData);
   return (
     <div>
       <Layout>
-        <MCQ data={allData} />
+        <MCQ data={physicsData} />
       </Layout>
     </div>
   );

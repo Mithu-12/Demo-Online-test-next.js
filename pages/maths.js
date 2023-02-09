@@ -1,12 +1,12 @@
 import Layout from '../Components/Layout';
 import MCQ from '../Components/MCQ';
-import { allData } from '../utils/data';
+import { mathData } from '../utils/data';
 
-export default function Home() {
+export default function Maths() {
   return (
     <div>
       <Layout>
-        <MCQ data={allData} />
+        <MCQ data={mathData} />
       </Layout>
     </div>
   );
